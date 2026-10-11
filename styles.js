@@ -6,7 +6,7 @@
 	const loginUrl = new URL("Log In.html", scriptUrl);
 	const homeUrl = new URL("index.html", scriptUrl);
 	const currentPath = decodeURIComponent(window.location.pathname).toLowerCase();
-	const isLoginPage = currentPath.endsWith("/log in.html");
+	const isLoginPage = /\/log in(\.html)?\/?$/.test(currentPath);
 	const isFoodiePage = currentPath.includes("/foodies/");
 	const readAccounts = function () {
 		try {

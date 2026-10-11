@@ -1,2 +1,7 @@
 [build]
   publish = "."
+
+# Keep original .html URLs; pretty URL rewrites (e.g. "/Log In.html" -> "/log%20in")
+# break the login page detection and cause a redirect loop.
+[build.processing.html]
+  pretty_urls = false
