@@ -1,0 +1,1153 @@
+:root {
+    --ink: #1F2A2A;
+    --muted: #62706D;
+    --cream: #F7F1E8;
+    --paper: #FFFDF9;
+    --terracotta: #C95F3D;
+    --rust: #8F3829;
+    --sage: #8FA487;
+    --line: #DED6CA;
+    --content-width: 1180px;
+    --page-gutter: clamp(1.25rem, 6vw, 5.5rem);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    min-width: 320px;
+    color: var(--ink);
+    background: var(--cream);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--terracotta);
+    outline-offset: 3px;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem var(--page-gutter);
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+}
+
+
+.brand {
+    color: var(--rust);
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+}
+
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.75rem;
+}
+
+
+.nav-links a {
+    color: var(--ink);
+    font-family: Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 160ms ease;
+}
+
+
+.nav-links a:hover,
+.nav-links .active {
+    color: var(--terracotta);
+}
+
+
+.hero {
+    display: flex;
+    min-height: min(72vh, 760px);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: clamp(5rem, 12vh, 9rem) var(--page-gutter);
+    background: linear-gradient(115deg, rgba(20, 43, 34, 0.78), rgba(20, 43, 34, 0.3)), url("media/philippines.jpg") center / cover no-repeat;
+    color: var(--paper);
+}
+
+
+.eyebrow {
+    margin: 0 0 0.75rem;
+    color: var(--terracotta);
+    font-family: Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+
+h1,
+h2,
+p {
+    margin-top: 0;
+}
+
+
+h1 {
+    max-width: 800px;
+    margin-bottom: 1rem;
+    color: var(--rust);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: normal;
+    line-height: 1.08;
+}
+
+
+#welcome-heading {
+    max-width: 38rem;
+    color: var(--muted);
+}
+
+
+.hero-text {
+    max-width: 42rem;
+    margin-bottom: 0;
+    color: rgba(255, 253, 249, 0.92);
+    font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+}
+
+
+.hero .eyebrow {
+    color: #F2D27A;
+}
+
+
+.hero h1 {
+    max-width: 900px;
+    color: var(--paper);
+    font-size: clamp(3.5rem, 10vw, 7rem);
+    line-height: 0.98;
+}
+
+
+.intro-section,
+.geography-section {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: clamp(2rem, 6vw, 5rem);
+    padding: clamp(3.5rem, 8vw, 6rem) var(--page-gutter);
+}
+
+
+.intro-section {
+    background: var(--paper);
+}
+
+
+.intro-section > *,
+.geography-section > * {
+    width: 100%;
+    max-width: 560px;
+}
+
+
+.intro-section .section-heading h2 {
+    margin-bottom: 0.75rem;
+    color: var(--rust);
+    font-size: clamp(1.8rem, 3.4vw, 2.7rem);
+    line-height: 1.15;
+}
+
+
+.intro-section .section-heading p:last-child {
+    margin-bottom: 0;
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+
+.intro-copy {
+    max-width: 34rem;
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+
+.geography-section {
+    align-items: start;
+    background: var(--sage);
+}
+
+
+.geography-section h2 {
+    margin-bottom: 0.9rem;
+    color: #20382C;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.12;
+}
+
+
+.geography-section > div:first-child > p:last-child {
+    max-width: 34rem;
+}
+
+
+.geography-section .eyebrow,
+.geography-section p {
+    color: #304738;
+}
+
+
+.geography-facts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+}
+
+
+.fact {
+    padding-top: 1rem;
+    border-top: 1px solid rgba(48, 71, 56, 0.45);
+}
+
+
+.fact strong,
+.fact span {
+    display: block;
+}
+
+
+.fact strong {
+    margin-bottom: 0.35rem;
+    color: var(--rust);
+    font-size: 1.1rem;
+}
+
+
+.fact span {
+    color: #304738;
+    font-size: 0.95rem;
+}
+
+
+.site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.5rem var(--page-gutter);
+    color: var(--muted);
+    background: var(--paper);
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+}
+
+
+.site-footer p {
+    margin: 0;
+    color: var(--rust);
+    font-weight: bold;
+}
+
+
+.logout-button {
+    margin-left: auto;
+    padding: 0.45rem 0.7rem;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--rust);
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+}
+
+
+.logout-button:hover {
+    border-color: var(--terracotta);
+    color: var(--terracotta);
+}
+
+
+.logout-button:focus-visible {
+    outline: 2px solid var(--terracotta);
+    outline-offset: 2px;
+}
+
+
+.simple-page {
+    min-height: 70vh;
+    padding: clamp(5rem, 12vh, 8rem) var(--page-gutter);
+    background: var(--paper);
+}
+
+.login-page {
+    display: grid;
+    place-items: center;
+    min-height: 70vh;
+    padding: 4rem var(--page-gutter);
+    background: var(--paper);
+}
+
+
+.login-panel {
+    width: min(100%, 30rem);
+    padding: 2.5rem;
+    border: 1px solid var(--line);
+    background: var(--cream);
+    box-shadow: 0 1.5rem 4rem rgba(31, 42, 42, 0.08);
+}
+
+
+.login-panel h1 {
+    margin-bottom: 1.5rem;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+
+.auth-switch {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid var(--line);
+}
+
+
+.auth-switch-button {
+    padding: 0.8rem 0.5rem;
+    border: 0;
+    border-bottom: 3px solid transparent;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+
+.auth-switch-button.is-active {
+    border-bottom-color: var(--terracotta);
+    color: var(--rust);
+}
+
+
+.auth-switch-button:focus-visible {
+    outline: 2px solid var(--terracotta);
+    outline-offset: 2px;
+}
+
+
+.auth-message {
+    min-height: 1.6em;
+    margin-bottom: 0.75rem;
+    color: var(--muted);
+    font-family: Arial, sans-serif;
+    font-size: 0.88rem;
+}
+
+
+.auth-message.is-error {
+    color: var(--rust);
+}
+
+
+.auth-form[hidden] {
+    display: none;
+}
+
+
+.login-form {
+    display: grid;
+    gap: 1rem;
+}
+
+
+.login-form label {
+    color: var(--ink);
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+
+.login-form input {
+    display: block;
+    width: 100%;
+    margin-top: 0.4rem;
+    padding: 0.85rem;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--ink);
+    font: inherit;
+}
+
+
+.login-form input:focus {
+    outline: 2px solid var(--terracotta);
+    outline-offset: 2px;
+}
+
+
+.login-form button {
+    margin-top: 0.75rem;
+    padding: 0.9rem 1.25rem;
+    border: 0;
+    background: var(--rust);
+    color: var(--paper);
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+
+.login-form button:hover {
+    background: var(--terracotta);
+}
+
+
+.simple-page p:last-child {
+    max-width: 35rem;
+    color: var(--muted);
+    font-size: 1.2rem;
+}
+
+
+.island-intro {
+    max-width: 35rem;
+    margin-bottom: 3rem;
+    color: var(--muted);
+    font-size: 1.15rem;
+}
+
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    max-width: 900px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.menu-grid a {
+    display: block;
+    height: 100%;
+    padding: 1.5rem;
+    border: 1px solid var(--line);
+    background: var(--cream);
+    color: var(--ink);
+    text-decoration: none;
+    transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
+    box-shadow: 0 0.5rem 1.5rem rgba(31, 42, 42, 0.04);
+}
+
+
+.menu-grid a:hover {
+    border-color: var(--terracotta);
+    background: #fff8ee;
+    transform: translateY(-3px);
+}
+
+
+.menu-grid strong,
+.menu-grid span {
+    display: block;
+}
+
+
+.menu-grid strong {
+    margin-bottom: 0.35rem;
+    color: var(--rust);
+    font-size: 1.35rem;
+    font-weight: normal;
+}
+
+
+.menu-grid span {
+    color: var(--muted);
+    font-family: Arial, sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+}
+
+
+.luzon-page {
+    --pine-green: #29483A;
+    --mountain-green: #3F5D45;
+    --rice-terrace: #7C9A5B;
+    --luzon-terracotta: #B85C38;
+    --clay: #C9825B;
+    --sun-gold: #E3B23C;
+    --warm-yellow: #F2D27A;
+    --earth-brown: #6B4632;
+    --rice-cream: #F6F0DF;
+    --cloud-white: #FFFDF7;
+    color: var(--pine-green);
+    background: var(--rice-cream);
+}
+
+
+.visayas-page {
+    --visayas-blue: #1D5369;
+    --visayas-teal: #2B7A78;
+    --visayas-sea: #4A8C8C;
+    --visayas-coral: #D06C5C;
+    --visayas-sand: #F7E7CF;
+    --visayas-ink: #204B5A;
+    --visayas-cream: #FFFDF8;
+    color: var(--visayas-ink);
+    background: var(--visayas-sand);
+}
+
+
+.luzon-page .navbar {
+    background: var(--cloud-white);
+    border-bottom-color: var(--rice-terrace);
+}
+
+
+.visayas-page .navbar {
+    background: var(--visayas-cream);
+    border-bottom-color: rgba(29, 83, 105, 0.2);
+}
+
+
+.luzon-page .brand {
+    color: var(--pine-green);
+}
+
+
+.visayas-page .brand {
+    color: var(--visayas-blue);
+}
+
+
+.luzon-page .nav-links a {
+    color: var(--mountain-green);
+}
+
+
+.visayas-page .nav-links a {
+    color: var(--visayas-ink);
+}
+
+
+.luzon-page .nav-links a:hover,
+.luzon-page .nav-links .active {
+    color: var(--luzon-terracotta);
+}
+
+
+.visayas-page .nav-links a:hover,
+.visayas-page .nav-links .active {
+    color: var(--visayas-coral);
+}
+
+
+.luzon-menu {
+    min-height: 58vh;
+    padding: 11vh 7vw 12vh;
+    background: linear-gradient(125deg, rgba(247, 241, 232, 0.58), rgba(215, 226, 203, 0.48)), url("media/Luzon.png") center / cover no-repeat;
+}
+
+
+.famous-menu {
+    min-height: 58vh;
+    padding: 11vh 7vw 12vh;
+    background: var(--rice-cream);
+}
+
+
+.visayas-menu {
+    min-height: 58vh;
+    padding: 11vh 7vw 12vh;
+    background: linear-gradient(125deg, rgba(247, 241, 232, 0.58), rgba(185, 223, 222, 0.35)), url("media/Visayas.png") center / cover no-repeat;
+}
+
+
+.mindanao-menu {
+    background: linear-gradient(125deg, rgba(247, 241, 232, 0.58), rgba(215, 226, 203, 0.35)), url("media/Mindanao.png") center / cover no-repeat;
+}
+
+
+.luzon-heading {
+    max-width: var(--content-width);
+    margin-bottom: 3.5rem;
+}
+
+
+.visayas-heading {
+    max-width: var(--content-width);
+    margin-bottom: 3.5rem;
+}
+
+.luzon-eyebrow,
+.dish-region {
+    margin: 0 0 0.75rem;
+    color: var(--luzon-terracotta);
+    font-family: Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+
+.visayas-page .luzon-eyebrow,
+.visayas-page .dish-region,
+.visayas-eyebrow {
+    color: var(--visayas-coral);
+}
+
+
+.luzon-heading h1 {
+    margin-bottom: 1.25rem;
+    color: var(--pine-green);
+    font-size: clamp(3rem, 7vw, 6rem);
+}
+
+
+.visayas-heading h1 {
+    margin-bottom: 1.25rem;
+    color: var(--visayas-blue);
+    font-size: clamp(3rem, 7vw, 6rem);
+}
+
+.luzon-intro {
+    max-width: 38rem;
+    color: var(--mountain-green);
+    font-size: 1.2rem;
+}
+
+
+.luzon-heading > h2 {
+    margin: 2rem 0 0.5rem;
+    color: var(--pine-green);
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+}
+
+
+.luzon-heading > h2 + p {
+    max-width: 38rem;
+    color: var(--earth-brown);
+}
+
+
+.visayas-intro {
+    max-width: 38rem;
+    color: var(--visayas-ink);
+    font-size: 1.2rem;
+}
+
+.dish-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    max-width: var(--content-width);
+    margin-inline: auto;
+}
+
+
+.dish-card {
+    min-height: 16rem;
+    padding: clamp(1.35rem, 2.5vw, 2rem);
+    border-top: 0.5rem solid var(--mountain-green);
+    background: var(--cloud-white);
+    box-shadow: 0 0.75rem 1.5rem rgba(41, 72, 58, 0.08);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+
+.dish-card:hover {
+    box-shadow: 0 1rem 2rem rgba(41, 72, 58, 0.14);
+    transform: translateY(-3px);
+}
+
+
+a.dish-card {
+    display: block;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+
+a.dish-card:hover {
+    box-shadow: 0 1rem 2rem rgba(41, 72, 58, 0.16);
+    transform: translateY(-4px);
+}
+
+
+.dish-card h2 {
+    margin-bottom: 0.85rem;
+    color: var(--pine-green);
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+
+.dish-card h2 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.dish-card h2 a:hover {
+    color: var(--visayas-coral);
+}
+
+
+.dish-card p:not(.dish-region) {
+    max-width: 30rem;
+    margin-bottom: 0;
+    color: var(--earth-brown);
+    font-size: 0.98rem;
+    line-height: 1.65;
+}
+
+
+.dish-user-rating {
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(41, 72, 58, 0.12);
+    background: rgba(255, 255, 255, 0.52);
+    box-shadow: 0 0.75rem 1.5rem rgba(41, 72, 58, 0.06);
+}
+
+
+.dish-user-rating-title {
+    margin: 0 0 0.75rem;
+    color: var(--pine-green);
+    font-size: clamp(1.4rem, 2.2vw, 2.1rem);
+}
+
+
+.dish-user-rating-summary {
+    margin: 0 0 1rem;
+    color: var(--muted);
+    font-family: Arial, sans-serif;
+    font-size: 0.92rem;
+}
+
+
+.dish-rating-form {
+    display: grid;
+    gap: 0.8rem;
+}
+
+
+.dish-user-stars {
+    display: flex;
+    gap: 0.45rem;
+    align-items: center;
+}
+
+
+.dish-user-star {
+    border: 0;
+    background: transparent;
+    color: #c7b9ae;
+    cursor: pointer;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    line-height: 1;
+    transition: transform 150ms ease, color 150ms ease;
+}
+
+
+.dish-user-star:hover,
+.dish-user-star:focus-visible,
+.dish-user-star.is-active {
+    color: #d39b12;
+    transform: translateY(-1px);
+}
+
+
+.dish-user-rating-hint {
+    margin: 0;
+    color: var(--muted);
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+}
+
+
+.dish-user-rating-submit {
+    width: fit-content;
+    padding: 0.7rem 1rem;
+    border: 0;
+    background: var(--pine-green);
+    color: var(--cloud-white);
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+
+.dish-user-rating-submit:hover {
+    background: var(--luzon-terracotta);
+}
+
+
+.dish-user-rating-status {
+    min-height: 1.2em;
+    margin: 0;
+    color: var(--muted);
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+}
+
+
+.dish-user-rating-status.is-error {
+    color: #9C2F26;
+}
+
+
+.dish-note {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.35rem 0.65rem;
+    background: var(--warm-yellow);
+    color: var(--earth-brown);
+    font-family: Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+
+.dish-card--forest {
+    border-top-color: var(--pine-green);
+}
+
+
+.dish-card--terrace {
+    border-top-color: var(--rice-terrace);
+}
+
+
+.dish-card--clay {
+    border-top-color: var(--clay);
+}
+
+
+.dish-card--sun {
+    border-top-color: var(--sun-gold);
+}
+
+
+.luzon-recipe {
+    min-height: 70vh;
+    width: 100%;
+    max-width: 1360px;
+    margin-inline: auto;
+    padding: clamp(3rem, 6vw, 5rem) var(--page-gutter) 7rem;
+    background: var(--rice-cream);
+}
+
+
+.recipe-back {
+    display: inline-block;
+    margin-bottom: 3rem;
+    color: var(--luzon-terracotta);
+    font-family: Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+.recipe-back:hover {
+    color: var(--pine-green);
+}
+
+
+.recipe-link {
+    display: inline-block;
+    margin-top: 2rem;
+    color: var(--luzon-terracotta);
+    font-family: Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+.recipe-link:hover {
+    color: var(--pine-green);
+}
+
+
+.recipe-heading {
+    width: 100%;
+    max-width: var(--content-width);
+}
+
+
+.recipe-heading-copy h1 {
+    margin-bottom: 1rem;
+    color: var(--pine-green);
+    font-size: clamp(2.75rem, 6vw, 5rem);
+}
+
+
+.recipe-heading-copy > p:last-child {
+    max-width: 100%;
+    color: var(--earth-brown);
+    font-size: clamp(1.15rem, 1.6vw, 1.4rem);
+    line-height: 1.75;
+}
+
+
+.simple-page {
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+
+.simple-page h1 {
+    max-width: 800px;
+    color: var(--pine-green, var(--rust));
+    font-size: clamp(2.75rem, 7vw, 5rem);
+    line-height: 1;
+}
+
+
+.simple-page p:not(.eyebrow) {
+    max-width: 48rem;
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+
+.recipe-media {
+    max-width: var(--content-width);
+    margin: 1.5rem 0 2.5rem;
+}
+
+
+.recipe-image {
+    display: block;
+    width: 100%;
+    max-height: 34rem;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid rgba(41, 72, 58, 0.12);
+    border-radius: 0.25rem;
+    background: var(--paper);
+}
+
+
+.recipe-layout {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.3fr);
+    gap: 5rem;
+    max-width: var(--content-width);
+    padding-top: 2rem;
+    border-top: 1px solid var(--rice-terrace);
+}
+
+
+.recipe-section h2 {
+    margin-bottom: 1.25rem;
+    color: var(--pine-green);
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+
+.ingredient-list,
+.method-list {
+    margin: 0;
+    padding-left: 1.25rem;
+    color: var(--earth-brown);
+}
+
+
+.ingredient-list li,
+.method-list li {
+    margin-bottom: 0.75rem;
+    padding-left: 0.35rem;
+}
+
+
+.ingredient-list li::marker {
+    color: var(--rice-terrace);
+}
+
+
+.method-list li::marker {
+    color: var(--luzon-terracotta);
+    font-weight: bold;
+}
+
+
+@media (max-width: 875px) {
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 0.8rem 1.2rem;
+    }
+
+
+    .hero {
+        min-height: 52vh;
+        padding-top: 8rem;
+    }
+
+
+    .intro-section,
+    .geography-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+
+    .geography-facts {
+        grid-template-columns: 1fr;
+    }
+
+
+    .site-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+    .logout-button {
+        margin-left: 0;
+    }
+
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .luzon-menu {
+        padding-top: 4rem;
+    }
+
+
+    .dish-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .luzon-recipe {
+        padding-top: 4rem;
+    }
+
+
+    .recipe-heading {
+        grid-template-columns: 1fr;
+    }
+
+
+    .recipe-layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+}
+
+
+@media (max-width: 560px) {
+    .navbar {
+        padding-top: 0.9rem;
+        padding-bottom: 0.9rem;
+    }
+
+
+    .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 0.6rem 1rem;
+    }
+
+
+    .nav-links a {
+        font-size: 0.7rem;
+    }
+
+
+    .hero {
+        min-height: 65vh;
+    }
+
+
+    .hero h1 {
+        font-size: clamp(3rem, 14vw, 4.5rem);
+    }
+
+
+    .intro-section,
+    .geography-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+
+    .geography-facts {
+        grid-template-columns: 1fr;
+    }
+
+
+    .dish-card {
+        min-height: 0;
+    }
+
+
+    .recipe-layout {
+        gap: 2rem;
+    }
+
+
+    .login-panel {
+        padding: 1.5rem;
+    }
+}

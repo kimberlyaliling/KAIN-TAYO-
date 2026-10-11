@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Log in to Kain Tayo!.">
+    <title>Kain Tayo! | Log in</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="styles.js"></script>
+</head>
+<body>
+    <nav class="navbar" aria-label="Main navigation">
+            <a class="brand" href="index.html">Kain Tayo!</a>
+        <div class="nav-links">
+            <a class="active" href="Log In.html" aria-current="page">A Step-by-Step Interactive Guide to Regional Filipino Cuisine</a>
+        </div>
+    </nav>
+
+
+    <main class="login-page">
+        <section class="login-panel" aria-labelledby="login-heading">
+            <p class="eyebrow">Welcome to Kain Tayo! Discovering Filipino Cuisine at Home</p>
+            <h1 id="login-heading">Join the table.</h1>
+            <div class="auth-switch" role="group" aria-label="Account options">
+                <button type="button" class="auth-switch-button is-active" data-auth-mode="create" aria-pressed="true">Create account</button>
+                <button type="button" class="auth-switch-button" data-auth-mode="login" aria-pressed="false">Sign in</button>
+            </div>
+            <p class="auth-message" role="status" aria-live="polite"></p>
+            <form class="login-form auth-form" id="create-account-form" action="#" method="post">
+                <label for="create-email">
+                    Email
+                    <input id="create-email" name="email" type="email" autocomplete="email" required>
+                </label>
+                <label for="create-password">
+                    Password
+                    <input id="create-password" name="password" type="password" autocomplete="new-password" minlength="8" required>
+                </label>
+                <label for="confirm-password">
+                    Confirm password
+                    <input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" minlength="8" required>
+                </label>
+                <button type="submit">Create account</button>
+            </form>
+            <form class="login-form auth-form" id="login-form" action="#" method="post" hidden>
+                <label for="login-email">
+                    Email
+                    <input id="login-email" name="email" type="email" autocomplete="email" required>
+                </label>
+                <label for="login-password">
+                    Password
+                    <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+                </label>
+                <button type="submit">Sign in</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
+
+
